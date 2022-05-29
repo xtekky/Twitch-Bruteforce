@@ -13,16 +13,16 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/github/languages/top/xtekky/Twitch-Account-Gen?style=flat-square" </a>
-  <img src="https://img.shields.io/github/last-commit/xtekky/Twitch-Account-Gen?style=flat-square" </a>
-  <img src="https://img.shields.io/github/stars/xtekky/Twitch-Account-Gen?color=7F9DE0&label=Stars&style=flat-square" </a>
-  <img src="https://img.shields.io/github/forks/xtekky/Twitch-Account-Gen?color=7F9DE0&label=Forks&style=flat-square" </a>
+  <img src="https://img.shields.io/github/languages/top/xtekky/Twitch-Bruteforce/?style=flat-square" </a>
+  <img src="https://img.shields.io/github/last-commit/xtekky/Twitch-Bruteforce/?style=flat-square" </a>
+  <img src="https://img.shields.io/github/stars/xtekky/Twitch-Bruteforce/?color=7F9DE0&label=Stars&style=flat-square" </a>
+  <img src="https://img.shields.io/github/forks/xtekky/Twitch-Bruteforce/?color=7F9DE0&label=Forks&style=flat-square" </a>
 </p>
 
 <h4 align="center">
-  <a href="https://discord.gg">🌌・Discord</a>
-  <a href="https://github.com/xtekky/Twitch-Account-Gen#license">💻・License</a>
-  <a href="https://github.com/xtekky/Twitch-Account-Gen#changelog">📜・ChangeLog</a>
+  <a href="https://discord.gg/onlp">🌌・Discord</a>
+  <a href="https://github.com/xtekky/Twitch-Bruteforce/#license">💻・License</a>
+  <a href="https://github.com/xtekky/Twitch-Bruteforce/#changelog">📜・ChangeLog</a>
 </h4>
 
 <h2 align="center">
@@ -36,7 +36,7 @@ Love ❌ code ✅
 
 ## :fire: Features
 
-✔ Attempts to generate twitch accounts using API
+✔ Attempts to bruteforce user:pass combos
 
 ---
 
