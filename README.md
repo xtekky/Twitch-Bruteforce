@@ -26,7 +26,7 @@
 </h4>
 
 <h2 align="center">
-  Twitch Gen was made by
+  Twitch XBruter was made by
 
 Love ❌ code ✅
 
