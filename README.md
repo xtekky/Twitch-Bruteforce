@@ -40,7 +40,7 @@ Love ❌ code ✅
 
 ---
 
-## 🚀・Setup Twitch Acc Gen
+## 🚀・Setup Twitch Bruteforce
 
 ```sh-session
 > This script is meant for devs, I will not provide any support
